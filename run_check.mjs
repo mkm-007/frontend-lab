@@ -5,8 +5,8 @@ const passed = (testOut.match(/\d+ passed/g) || ["0 passed"])[0];
 
 console.log(
   JSON.stringify({
-    components: 4,
-    sampleSites: 3,
+    views: ["sign-in", "fleet-monitor"],
+    sharedComponents: ["Button", "TextField", "Card", "TelemetryCard", "SiteStatusTable"],
     stack: "React + TypeScript + Vite",
     tests: passed,
   })

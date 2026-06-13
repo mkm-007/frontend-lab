@@ -10,6 +10,33 @@ body {
   padding: 0 1rem;
 }
 
+.view-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-nav button {
+  border: 1px solid #c5ced8;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.view-nav .nav-active {
+  background: #0572ec;
+  color: #fff;
+  border-color: #0572ec;
+}
+
+.view-desc {
+  color: #4a5568;
+  margin-top: -0.5rem;
+  margin-bottom: 1.25rem;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -17,6 +44,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.card,
 .telemetry-card,
 .site-table {
   background: #fff;
@@ -24,8 +52,65 @@ body {
   border-radius: 8px;
 }
 
+.card {
+  padding: 1rem;
+  max-width: 420px;
+}
+
 .telemetry-card {
   padding: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.field input {
+  border: 1px solid #c5ced8;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.field input:focus-visible {
+  outline: 2px solid #0572ec;
+  outline-offset: 1px;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: 2px solid #0572ec;
+  outline-offset: 2px;
+}
+
+.button-primary {
+  background: #0572ec;
+  color: #fff;
+}
+
+.button-secondary {
+  background: #eef1f5;
+  color: #1a1a1a;
 }
 
 .site-table {
@@ -38,11 +123,4 @@ body {
   padding: 0.6rem 0.8rem;
   text-align: left;
   border-bottom: 1px solid #e6ebf0;
-}
-
-.button {
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
 }
